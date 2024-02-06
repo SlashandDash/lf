@@ -1,0 +1,46 @@
+set ratios 1:2:3
+set cleaner ~/.config/lf/cleaner
+set previewer ~/.config/lf/preview
+
+# Custom Functions
+
+cmd open $xdg-open "$f"
+
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+
+cmd touch ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+
+# Basic Settings
+set hidden true
+set icons
+
+map d
+map y
+map m
+
+# Basic Functions
+map . set hidden!
+
+set ignorecase true
+
+# Movement
+map gd cd ~/Downloads
+map gc cd ~/.config
+map yy copy
+map p paste
+map dd delete
+map <enter> open
+map R reload
+map mk mkdir
+map t touch
